@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Sea Level Rise Slider</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>Sea Level Rise Slider</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- Sidebar -->
-  <div id="sidebar-container">
-    <div id="sidebar">
-      <div id="title">Sea Level Rise Slider</div>
-      <p>Use the slider to see how sea level rise will affect Lower Manhattan.</p>
-      <p><strong>Move the slider to select a sea level rise between 0 and 3m.</strong></p>
-      <div id="slider-container">
-        <div id="slider">
-          <input type="range" min="0" max="3" step="1" value="0" id="seaLevelSlider" />
-          <div id="slider-labels">
-            <span>0m</span>
-            <span>1m</span>
-            <span>2m</span>
-            <span>3m</span>
-          </div>
+    <!-- Sidebar -->
+    <div id="sidebar-container">
+        <div id="sidebar">
+            <div id="title">Sea Level Rise Slider</div>
+            <p>Use the slider to see how sea level rise will affect Lower Manhattan. Climate scientists expect
+                about 2m of sea level rise by 2100 under a "business as usual" scenario, but some estimates are as high as 3m. 
+            </p>
+            <p><strong>Move the slider to select a sea level rise between 0 and 3m.</strong></p>
+            <!-- Autoplay Toggle -->
+            <div id="autoplay-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="autoplayCheckbox" checked>
+                    <span class="slider-switch round"></span>
+                </label>
+                <span style="margin-left: 10px;">Autoplay</span>
+            </div>
+            <!-- Slider -->
+                <div id="slider">
+                    <input type="range" min="0" max="3" step="1" value="0" id="seaLevelSlider" />
+                    <div id="slider-labels">
+                        <span>0m</span>
+                        <span>1m</span>
+                        <span>2m</span>
+                        <span>3m</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+    <!-- Images -->
+    <div id="image-container">
+        <img src="https://i.postimg.cc/9MgkTL5j/0m.png" class="sea-level" id="level0" />
+        <img src="https://i.postimg.cc/90vNgzQ8/1m.png" class="sea-level" id="level1" />
+        <img src="https://i.postimg.cc/dQXXVNj2/2m.png" class="sea-level" id="level2" />
+        <img src="https://i.postimg.cc/Kz8VRdWN/3m.png" class="sea-level" id="level3" />
     </div>
-  </div>
 
-  <!-- Images -->
-  <div id="image-container">
-    <img src="https://i.postimg.cc/9MgkTL5j/0m.png" class="sea-level" id="level0" />
-    <img src="https://i.postimg.cc/90vNgzQ8/1m.png" class="sea-level" id="level1" />
-    <img src="https://i.postimg.cc/dQXXVNj2/2m.png" class="sea-level" id="level2" />
-    <img src="https://i.postimg.cc/Kz8VRdWN/3m.png" class="sea-level" id="level3" />
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <div id="wave-overlay"></div>
 </body>
+
 </html>
